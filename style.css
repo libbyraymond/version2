@@ -20,30 +20,17 @@
 
 .headline-container {
     position: relative;
-    margin-top: -50px;
-    margin-bottom: -80px;
+    margin-top: -50px; /* Adjusts the position of the headline over video */
+    margin-bottom: -80px; /* position of the headline 1st section */
     z-index: 2;
-    background-color: var(--Beige);
-    padding: 20px;
+    background-color: white;
+    padding: 2px;
     max-width: 1000px;
     margin-left: 2%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    color: white;
+    color: var(--p-green);
 }
-
-/*.header {
-    width: 100%;
-    margin: 0;
-    padding: 0 20px;
-    justify-content: center;
-    text-align: center; 
-}
-
-.header-image {
-    width: 100%;
-    height: auto;
-} */
 
 /* Body */
 .content-wrapper {
@@ -69,7 +56,8 @@ body, html {
 }
 h1 {
     font-family: Chalk;
-    font-size: 3rem;
+    font-size: 6rem;
+    padding: 2px;
 }
 h2 {
     font-family: Chalk;
@@ -86,14 +74,14 @@ p {
 }
 
 
-/* Sections */
+/* Sections  */
 .section {
     padding: 60px 20px;
     min-height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: var(--p-blue);
+    background-color: var(--p-green);
     z-index: 2;
 }
 
@@ -103,22 +91,23 @@ p {
     color: white;
     flex-direction: column;
     gap: 20px;
-}
+} 
 
 /* Images */
-/* .content.image-right {
+ .content.image-right {
     flex-direction: row;
 }
 
 .content.image-left {
     flex-direction: row-reverse;
-} */
+} 
 
 .image-container {
     margin: 30px 0;
     text-align: center;
   }
   
+
 .image-container img {
     max-width: 100%;
     height: 50vh;
@@ -143,24 +132,29 @@ p {
     z-index: 1;
 }
 
+/* Parallax */
 .parallax-images {
     background-attachment: fixed;
-    background-size: cover; /* 'full' is not valid, use 'cover' instead */
+    background-size: cover; /* Changed from 'full' to 'cover' */
     background-position: center;
-    height: 100vh; /* Use viewport height for full screen */
-    width: 100%;
-    margin: 0; /* Remove default margins */
-    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove any margins */
+    padding: 0; /* Remove any padding */
+    width: 100%; /* Full width */
 }
 
 #street {
     background-image: url(MuralPics-14.jpg);
-    height: 100vh; /* Change from 80vh to 100vh for full screen */
+    height: 100vh; /* Changed from 80vh to 100vh for full screen */
     width: 100%;
     background-size: cover;
+    /* Make sure it's outside of any container styling */
+    position: relative;
+    left: 0;
+    right: 0;
 }
 
 figure {
     display: block;
     margin: 0; /* Reset all margins */
+    padding: 0; /* Reset all padding */
 }

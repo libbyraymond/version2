@@ -93,16 +93,18 @@
 
 
         /* Background image container */
+
         .background {
             position: fixed;
-            top: 100vh;
+            top: 0;
             left: 0;
-            width: 100%;
+            width: 100vw;
             height: 100vh;
-            background-image: url(MuralPics-14.jpg);
-            background-size: cover;
+            background-image: url(MuralPics-14.jpg); /* Replace with your actual image */
+            background-size: cover; /* Ensures it covers the whole viewport */
             background-position: center;
-            z-index: -3;
+            background-attachment: fixed; /* This keeps it in place */
+            z-index: -1; /* Push it to the back */
         }
         
         /* Main container */
@@ -111,6 +113,7 @@
             width: 100%;
             height: auto;
             overflow: hidden;
+            background-image: url(MuralPics-14.jpg);
             padding-bottom: 100vh; /* Space for content section */
         }
         
@@ -224,7 +227,7 @@
 <body>
 
     <!--Video background-->
-  <video class= video-container src="Mural Walk.mp4" autoplay loop muted></video>
+ <!--- <video class= video-container src="Mural Walk.mp4" autoplay loop muted></video> -->
     <!--ARTICLE TITLE BOX -->
       <div class="content-wrapper">
       <div class="headline-container">
@@ -287,15 +290,14 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+ 
     <!-- Background image -->
     <div class="background"></div>
     
+
     <!-- SCROLLY ALLEY BREAK -->
-    <figure class="parallax-images" id="glass-key" alt="Glass Key Photo parallax display">
-        <div class="scroll-image-div" id="glass-key-images">
+
+        <div class="scroll-image-div">
             <figure class="image-and-caption-v">
                 <img class="scroll-image-vertical" src="MuralPics-15.jpg" alt="Chris Gazaleh's Mural “Heart Shaped Rocks” in Clarion Alley">
                 <cite>Chris Gazaleh's Mural “Heart Shaped Rocks”.</cite>
